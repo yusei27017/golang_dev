@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  golang-dev:
+    image: runqukunf/golang-dev:1
+    container_name: golang-dev
+    volumes:
+      - ./golang_dev:/golang_dev
+    networks:
+      - dev-network
+
+networks:
+  dev-network:
+    
