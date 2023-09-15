@@ -4,7 +4,9 @@ WORKDIR /golang_dev
 
 ENV TZ=Asia/Taipei
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt-get update
-RUN apt-get install -y golang-go
+RUN apt-get update && \
+    apt-get install -y golang-go && \
+    apt-get install -y git curl && \
+    apt-get install -y --reinstall ca-certificates
 
 CMD [ "tail", "-f", "/dev/null" ]

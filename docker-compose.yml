@@ -2,7 +2,7 @@ version: '3'
 services:
 
   golang-dev:
-    image: runqukunf/golang-dev:1
+    image: runqukunf/golang-dev
     container_name: golang-dev
     volumes:
       - ./golang_dev:/golang_dev
